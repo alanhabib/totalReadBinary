@@ -64,6 +64,9 @@ function targetHeader(data) {
   const laneNumber = data.readFloatLE(curOffset); // 34 (BE)
   curOffset += 4;
 
+  // stod och kika på koden hela lunchen för att se varför den var på 0 tills jag upptäckte att när de går i mål blir sträckan 0
+  // console.log(data[curOffset]);
+
   const distanceToGoalLine = data.readFloatLE(curOffset); // 38 (BE)
   curOffset += 4;
 
